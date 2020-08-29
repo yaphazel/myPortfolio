@@ -18,7 +18,7 @@ html{
 a{
   text-decoration: none;
 }
-.container{
+.hero-container{
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -123,7 +123,7 @@ a{
 
 /*Project Section*/
 
-.project-container{
+.container{
   min-height: 90vh;
   margin: 10px 10px;
   margin-top:100px;
@@ -196,7 +196,7 @@ a{
 }
 .project-exp p{
   max-width: 380px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   transition: .3s ease;
 }
 
@@ -209,10 +209,10 @@ a{
 }
 .textappear{
   opacity: 0%;
+  vertical-align: middle;
   transition: 1s ease;
   color:#8F00FF;
   font-size: 4rem;
-  transform: translateY(20%);
   font-family: 'Nothing You Could Do', cursive;
 }
 .project-exp:hover .textappear{
@@ -220,8 +220,10 @@ a{
 }
 
 /*End of Project Section*/
+/*portfolio Section*/
 
 /*About Section*/
+
 .aboutme-container{
   min-height: 100vh
 }
@@ -229,28 +231,34 @@ a{
 .aboutme-top{
   margin-bottom: 70px;
 }
-#about img{
-  display: block;
-  margin: auto;
-  background-color: green;
-}
-#about h2{
-  margin: 20px 0;
-}
+
 .aboutme-bottom{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem,31fr));
-  grid-gap:0.5rem;
-
-
-
-
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin: auto;
 }
 
 .aboutme-summ {
+  margin:0 20px;
   font-size:1.8rem;
   max-width: 550px;
+  min-height: 500px;
+  max-width: 750px;
+
+
 }
+#about img{
+  margin: 5px;
+  background-color: green;
+  margin: auto;
+}
+
+#about h2{
+  margin: 20px 0;
+}
+
+
 
 #about .top{
   display: flex;
@@ -266,5 +274,6 @@ a{
   letter-spacing: 0.2rem;
   padding: 20px;
 }
+
 
 /*End of About Section*/
