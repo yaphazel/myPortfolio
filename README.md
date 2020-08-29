@@ -1,2 +1,2 @@
 # Portfolio
-https://yaphazel.github.io/Portfolio/
+https://yaphazel.github.io/myPortfolio/
