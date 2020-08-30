@@ -164,27 +164,26 @@ a{
 
 }
 
-.project-exp{
-  background-image: url("https://wallpaperaccess.com/full/2411580.gif");
+.exp{
+  background-image: url("https://pbs.twimg.com/media/D-UikWdUYAACzvs.jpg");
   background-size: cover;
   border: solid white;
   border-radius: 7%;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
-  color:white;
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
   transition: .3s ease;
-
 }
-.project-exp::after{
+
+.exp::after{
     content: "";
-    background-color: #DF6589FF;
+    background-color: pink;
     border-radius: 7%;
     position: absolute;
     top:0;
@@ -192,22 +191,32 @@ a{
     width: 100%;
     height:100%;
     opacity: 0.2;
-    z-index: -1;
+    z-index: 2;
 }
-.project-exp p{
+
+.exp p{
   max-width: 380px;
-  padding-bottom: 20px;
+  text-align: center;
+  transition: .3s ease;
+}
+.exp img{
+  margin:10px;
   transition: .3s ease;
 }
 
-.project-exp:hover{
-  opacity: 0.6;
+.exp:hover{
+  opacity: 0.9;
 }
 
-.project-exp:hover p, .project-exp:hover h2 {
-  opacity: 0;
+.exp:hover img{
+  width: 180px;
 }
-.textappear{
+.exp:hover p, .exp:hover h2 {
+  display:none;
+}
+
+
+/*.textappear{
   opacity: 0%;
   vertical-align: middle;
   transition: 1s ease;
@@ -215,9 +224,9 @@ a{
   font-size: 4rem;
   font-family: 'Nothing You Could Do', cursive;
 }
-.project-exp:hover .textappear{
+.exp:hover .textappear{
   opacity: 100%;
-}
+}*/
 
 /*End of Project Section*/
 /*portfolio Section*/
@@ -248,10 +257,8 @@ a{
 
 
 }
-#about img{
-  margin: 5px;
-  background-color: green;
-  margin: auto;
+.aboutme-img{
+  margin: 10px;
 }
 
 #about h2{
