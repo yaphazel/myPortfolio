@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
-/*Theme colours : Black , #E4A0F7*/
-/*|| General Styles*/
 *{ /*selects all elements*/
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 html{
@@ -25,85 +23,25 @@ pre {
 a{
   text-decoration: none;
 }
-/*|| End of General Styles*/
-/*|| SITEWIDE */
-#project .top,  #myproject .top, #projects .top{
+
+.hero-container{
+  min-height: 100vh;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px auto;
-  padding: 10px;
+
 }
 
-#project .top p, #myproject .top p {
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
-  padding: 20px;
-}
-
-.summary , .gallery{
-  margin: 0 20px;
-  font-size:1.6rem;
-  max-width: 550px;
-  min-height: 450px;
-  max-width: 750px;
-}
-/*Navigation*/
-#nav{
-  background-color:#35346B;
-  color:white;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom:1px;
-  padding:20px 10px;
-  box-shadow: 0 10px 0px 0px black;
-  font-family: "Oswald", sans-serif;
-}
-#nav h2{
-  font-family:'Nanum Myeongjo', serif;
-  letter-spacing: 0.35rem;
-  font-size: 3.2rem;
-}
-.nav_links{
-  display:flex;
-  flex-direction: row;
-  letter-spacing: 0.2rem;
-  font-size: 2rem;
-  display:flex;
-  align-items: center;
-}
-.links{
-  list-style: none;
-  padding: 0px 25px;
-}
-
-.nav_links a, .nav_links a:visited, .bar_links a, .bar_links a:visited{
-  color: white;
-}
-.bar{
-  font-family: "Oswald", sans-serif;
-  letter-spacing: 0.2rem;
-  height: 330px;
-  background-color:#35346B;
-}
-.bar li{
-  list-style: none;
-  padding: 25px 15px;
-  font-size:1.8rem;
-}
-/*End of Navigation*/
-/*|| End of SITEWIDE */
-/*Intro Section*/
-#intro{
+/*Hero Section*/
+#hero{
   background-image: url("https://wallpaperaccess.com/full/241571.jpg");
   background-size: cover;
   background-position: top center;
   position: relative;
   z-index: 1;
 }
-#intro::after{
+#hero::after{
   content: "";
   position: absolute;
   left: 0;
@@ -114,14 +52,7 @@ a{
   opacity:0.3 ;
   z-index: -1;
 }
-.intro-container{
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#intro h1{
+#hero h1{
   display: block;
   font-size: 4rem; /*Relative to font-size of the root element*/
   position: relative;
@@ -132,13 +63,13 @@ a{
 
   }
 
-#intro h1:nth-child(1) {
-    animation-delay:1s;
-}
-#intro h1:nth-child(2) {
-    animation-delay:1.5s;
-}
-#intro h1 span {
+  #hero h1:nth-child(1) {
+      animation-delay:1s;
+  }
+  #hero h1:nth-child(2) {
+      animation-delay:1.5s;
+  }
+#hero h1 span {
   left: 0;
   top: 0;
   height: 100%;
@@ -147,13 +78,13 @@ a{
   position: absolute;
   animation: mymove 1.2s ease;
 }
-#intro h1:nth-child(1) span{
+#hero h1:nth-child(1) span{
     animation-delay:.5s;
 }
-#intro h1:nth-child(2) span{
+#hero h1:nth-child(2) span{
     animation-delay:1s;
 }
-#intro .cta{
+#hero .cta{
   display: inline-block;
   padding: 10px 30px;
   color:#E39FF6;
@@ -165,13 +96,13 @@ a{
   transition: 0.3s ease;
 }
 
-#intro .cta:hover{
+#hero .cta:hover{
   color: #FAF0DC;
   background-color:#E39FF6;
 }
 
 
-/*End of Intro Section*/
+/*End of Hero Section*/
 
 /*Keyframes*/
 @keyframes mymove {
@@ -198,13 +129,26 @@ a{
   margin: 10px 10px;
   margin-top:100px;
 }
+#project .top,  #myproject .top, #projects .top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 10px;
+}
 
+#project .top p, #myproject .top p {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 20px;
+}
 .title{
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   font-weight: normal;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
   margin: 10px auto;
   text-align: center;
 }
@@ -218,7 +162,7 @@ a{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap:5rem;
   margin: 25px;
-  text-align: center;
+
 }
 
 .box{
@@ -311,6 +255,13 @@ a{
   margin: auto;
 }
 
+.summary , .gallery{
+  margin: 0 20px;
+  font-size:1.8rem;
+  max-width: 550px;
+  min-height: 450px;
+  max-width: 750px;
+}
 
 .aboutme-img{
   margin: 10px;
@@ -337,25 +288,23 @@ a{
 
 
 /*End of About Section*/
-/*Project.html Section*/
+/*Projects.html Section*/
 
-#me_project .container {
-  background-image: url('https://wallpaperaccess.com/full/1678026.jpg');
-  background-size:cover;
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 89vh;
+#myproject .bottom{
+  max-width: 800px;
+  margin-left:80px;
 }
-
+.container_two img{
+    height:500px;
+    width:100%;
+    object-fit: cover;
+}
 .top_two p{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align:center;
   font-size:30pt;
   letter-spacing: 0.2rem;
   padding: 25px;
-  color:#35346B;
 }
 
 .top_two p span{
@@ -365,19 +314,6 @@ a{
   color: #E39FF6;
 }
 
-#allprojects h1{
-  font-weight: normal;
-  letter-spacing: 0.2rem;
-  color: #35346B;
-}
-#allprojects .container{
-  min-height: 50vh;
-  font-family: 'Oswald',sans-serif;
-  font-weight: normal;
-  font-size:20px;
-  letter-spacing: 0.1rem;
-
-}
 /*End of Projects.html Section*/
 /*Project_BK.html Section*/
 
@@ -397,29 +333,18 @@ a{
 }
 /*End of Project_BK.html  Section*/
 /*project_rps.html Section*/
-
-#myproject .bottom{
-  max-width: 800px;
-  margin-left:80px;
-}
-
-#myproject .container{
-  margin-top:60px;
-}
 #myproject .summary{
   min-height:360px;
-  max-width: 800px;
 }
 #myproject .box-two{
-  width :400px;
+  width :450px;
   border-radius: 4%;
   box-shadow: 5px 5px 10px 0px lightgrey;
   text-align: center;
   margin: 20px;
 }
-
-#myproject .gallery{
- margin:0px 20px;
+#myproject .box-two p{
+  padding: 10px;
 }
 
 /*End of project_rps.html Section*/
