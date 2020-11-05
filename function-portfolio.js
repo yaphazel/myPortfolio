@@ -1,7 +1,7 @@
 /*Navigation*/
 $(document).ready(function() {
   $(".fa-bars").click(function(){
-    $(".bar").show();
+    $(".bar").slideDown();
     $(".fa-bars").hide();
     $(".fa-times").show();
   });
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $(".fa-times").click(function(){
-    $(".bar").hide();
+    $(".bar").slideUp();
     $(".fa-bars").show();
     $(".fa-times").hide();
   });
@@ -36,8 +36,8 @@ $(document).ready(function() {
 $(window).resize(function(){
   if ($(window).width()<550){
     $('.links').hide();
-    $('.fa-bars').show();
     $('.fa-times').hide();
+    $('.fa-bars').show();
     $('.bar').hide();
   }
   else {
